@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodhi Hospitality Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">&#11088; BODHI &#11088;</div>
+        <p>Share your experience with us</p>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Feedback Form -->
+        <section class="feedback-section">
+
+            <h1>🍽️ Give Your Feedback</h1>
+            <p class="subtitle">
+                Rate different aspects of your canteen experience.
+            </p>
+
+            <form id="feedbackForm">
+
+                <!-- Customer Name -->
+                <div class="input-group">
+                    <label for="customerName">Your Name</label>
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+
+                <!-- FOOD -->
+                <div class="category">
+                    <h2>🍔 Food</h2>
+
+                    <div class="rating-row">
+                        <span>Menu Variety</span>
+                        <div class="stars" data-rating="menuVariety"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Taste</span>
+                        <div class="stars" data-rating="taste"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Food Quality</span>
+                        <div class="stars" data-rating="foodQuality"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Presentation</span>
+                        <div class="stars" data-rating="presentation"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Value for Money</span>
+                        <div class="stars" data-rating="value"></div>
+                    </div>
+                </div>
+
+
+                <!-- SERVICE -->
+                <div class="category">
+                    <h2>👨‍🍳 Service</h2>
+
+                    <div class="rating-row">
+                        <span>Staff Behaviour</span>
+                        <div class="stars" data-rating="staffBehaviour"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Service Speed</span>
+                        <div class="stars" data-rating="serviceSpeed"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Order Accuracy</span>
+                        <div class="stars" data-rating="orderAccuracy"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Staff Helpfulness</span>
+                        <div class="stars" data-rating="helpfulness"></div>
+                    </div>
+                </div>
+
+
+                <!-- EXPERIENCE -->
+                <div class="category">
+                    <h2>🏠 Canteen Experience</h2>
+
+                    <div class="rating-row">
+                        <span>Ambience</span>
+                        <div class="stars" data-rating="ambience"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Cleanliness</span>
+                        <div class="stars" data-rating="cleanliness"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Seating</span>
+                        <div class="stars" data-rating="seating"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span> Atmosphere</span>
+                        <div class="stars" data-rating="music"></div>
+                    </div>
+                </div>
+
+
+                <!-- Comment -->
+                <div class="input-group">
+                    <label for="comment">Your Comment</label>
+
+                    <textarea
+                        id="comment"
+                        rows="5"
+                        placeholder="Tell us about your experience..."
+                        required
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+                    Submit Feedback
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+
+            <div class="reviews-header">
+
+                <div>
+                    <h1>💬 Customer Feedback</h1>
+                    <p>See what people are saying about us.</p>
+                </div>
+
+                <div class="overall-rating">
+                    <div id="overallRating">0.0</div>
+                    <div class="overall-stars">★★★★★</div>
+                    <small>
+                        Based on <span id="reviewCount">0</span> reviews
+                    </small>
+                </div>
+
+            </div>
+
+
+            <!-- Reviews will appear here -->
+            <div id="reviewsContainer"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Smart Canteen Feedback System</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
